@@ -1,210 +1,210 @@
 const produtosIniciais = [
   {
     descricao: "Chocolate ao leite Hersheys",
-    preco: 3.0,
+    preco: 3.00,
     estoque: 25,
     categoria: "Chocolate",
   },
 
   {
     descricao: "Bala de cereja Halls",
-    preco: 3.0,
+    preco: 3.00,
     estoque: 20,
     categoria: "Bala",
   },
 
   {
     descricao: "Bolacha de chocolate Passatempo",
-    preco: 1.5,
+    preco: 1.50,
     estoque: 15,
     categoria: "Bolacha",
   },
 
   {
     descricao: "Chocolate ao leite Nestlé",
-    preco: 5.5,
+    preco: 5.50,
     estoque: 25,
     categoria: "Chocolate",
   },
 
   {
     descricao: "Bala de cereja Freegells",
-    preco: 2.5,
+    preco: 2.50,
     estoque: 20,
     categoria: "Bala",
   },
 
   {
     descricao: "Bolacha de morango Passatempo",
-    preco: 1.5,
+    preco: 1.50,
     estoque: 15,
     categoria: "Bolacha",
   },
 
   {
     descricao: "Chocolate ao leite Lacta",
-    preco: 5.0,
+    preco: 5.00,
     estoque: 25,
     categoria: "Chocolate",
   },
 
   {
     descricao: "Bala de morango Halls",
-    preco: 3.0,
+    preco: 3.00,
     estoque: 20,
     categoria: "Bala",
   },
 
   {
     descricao: "Bolacha ao leite Passatempo",
-    preco: 1.5,
+    preco: 1.50,
     estoque: 15,
     categoria: "Bolacha",
   },
 
   {
     descricao: "Chocolate meio amargo Hersheys",
-    preco: 3.0,
+    preco: 3.00,
     estoque: 25,
     categoria: "Chocolate",
   },
 
   {
     descricao: "Bala de morango Freegells",
-    preco: 2.5,
+    preco: 2.50,
     estoque: 20,
     categoria: "Bala",
   },
 
   {
     descricao: "Bolacha de leite Nesfit",
-    preco: 2.5,
+    preco: 2.50,
     estoque: 15,
     categoria: "Bolacha",
   },
 
   {
     descricao: "Chocolate meio amargo Nestlé",
-    preco: 5.5,
+    preco: 5.50,
     estoque: 25,
     categoria: "Chocolate",
   },
 
   {
     descricao: "Bala de menta Halls",
-    preco: 3.0,
+    preco: 3.00,
     estoque: 20,
     categoria: "Bala",
   },
 
   {
     descricao: "Bolacha de chocolate Nesfit",
-    preco: 2.5,
+    preco: 2.50,
     estoque: 15,
     categoria: "Bolacha",
   },
 
   {
     descricao: "Chocolate meio amargo Lacta",
-    preco: 5.0,
+    preco: 5.00,
     estoque: 25,
     categoria: "Chocolate",
   },
 
   {
     descricao: "Bala de menta Freegells",
-    preco: 2.5,
+    preco: 2.50,
     estoque: 20,
     categoria: "Bala",
   },
 
   {
     descricao: "Bolacha de morango Nesfit",
-    preco: 2.5,
+    preco: 2.50,
     estoque: 15,
     categoria: "Bolacha",
   },
 
   {
     descricao: "Chocolate branco Hersheys",
-    preco: 3.0,
+    preco: 3.00,
     estoque: 25,
     categoria: "Chocolate",
   },
 
   {
     descricao: "Bala de melancia Halls",
-    preco: 3.0,
+    preco: 3.00,
     estoque: 20,
     categoria: "Bala",
   },
 
   {
     descricao: "Bolacha Waffer chocolate Bauducco",
-    preco: 3.0,
+    preco: 3.00,
     estoque: 15,
     categoria: "Bolacha",
   },
 
   {
     descricao: "Chocolate branco Nestlé",
-    preco: 5.5,
+    preco: 5.50,
     estoque: 25,
     categoria: "Chocolate",
   },
 
   {
     descricao: "Bala de melancia Freegells",
-    preco: 2.5,
+    preco: 2.50,
     estoque: 20,
     categoria: "Bala",
   },
 
   {
     descricao: "Bolacha Waffer morango Bauducco",
-    preco: 3.0,
+    preco: 3.00,
     estoque: 15,
     categoria: "Bolacha",
   },
 
   {
     descricao: "Chocolate branco Lacta",
-    preco: 5.0,
+    preco: 5.00,
     estoque: 25,
     categoria: "Chocolate",
   },
 
   {
     descricao: "Bala de extra forte Halls",
-    preco: 3.0,
+    preco: 3.00,
     estoque: 20,
     categoria: "Bala",
   },
 
   {
     descricao: "Cookies chocolate Toddy",
-    preco: 5.0,
+    preco: 5.00,
     estoque: 15,
     categoria: "Bolacha",
   },
 
   {
     descricao: "Chocolate flocos Hersheys",
-    preco: 3.0,
+    preco: 3.00,
     estoque: 25,
     categoria: "Chocolate",
   },
 
   {
     descricao: "Bala de extra forte Freegells",
-    preco: 2.5,
+    preco: 2.50,
     estoque: 20,
     categoria: "Bala",
   },
 
   {
     descricao: "Cookies chocolate branco Toddy",
-    preco: 5.0,
+    preco: 5.00,
     estoque: 15,
     categoria: "Bolacha",
   },
@@ -240,7 +240,7 @@ function exibirProdutos() {
   for (let i = 0; i < 15; i++) {
     txt += `<tr>
               <td>${produtos[i].descricao}</td>
-              <td>${produtos[i].preco}</td>
+              <td>${produtos[i].preco.toFixed(2)}</td>
               <td>${produtos[i].estoque}</td>
               <td>${produtos[i].categoria}</td>
               <td><button class="botao" onclick="comprar(${i})">Sim!</button></td>
@@ -252,7 +252,6 @@ function exibirProdutos() {
 
 
 function comprar(posicao) {
-
   const produtoSelecionado = produtos[posicao];
   const produtoEncontrado = produtosCarrinho.find((p) => p.descricao === produtoSelecionado.descricao);
 
@@ -284,10 +283,6 @@ function comprar(posicao) {
 
 
 function exibirProdutosCarrinho() {
-
-  console.log("Produtos do carrinho: ");
-  console.log({produtosCarrinho});
-
   var txtCarrinho = '';
 
   if (produtosCarrinho.length == 0) {
@@ -300,7 +295,7 @@ function exibirProdutosCarrinho() {
     for (let i = 0; i < produtosCarrinho.length; i++) {
       txtCarrinho += `<tr>
               <td>${produtosCarrinho[i].descricao}</td>
-              <td>${produtosCarrinho[i].preco}</td>
+              <td>${produtosCarrinho[i].preco.toFixed(2)}</td>
               <td>${produtosCarrinho[i].quantidade}</td>
               <td><button class="botao" onclick="remover(${i})">Sim!</button></td>
             </tr>`;
@@ -331,13 +326,11 @@ function remover(posicao) {
 
 
 
-
-//TODO: FAZER FUNÇÃO REMOVER QUE DIMINUA A QUANTIDA E, SE ZERAR, RETIRA DA TABELA O PRODUTO
 function calcularTotal() {
-//const precoTotal = produtosCarrinho.reduce((resultado, preco) => { return (resultado + (preco.preco * quantidadeCarrinho)); }, 0);
-//console.log(precoTotal);
-
-//Colocar valor final no id preco-total!
+var precoTotal = produtosCarrinho.reduce((resultado, produto) => {
+   return (resultado + (produto.preco * produto.quantidade)); 
+  }, 0);
+document.querySelector('#preco-total').innerHTML = precoTotal.toFixed(2);
 }
 
 
