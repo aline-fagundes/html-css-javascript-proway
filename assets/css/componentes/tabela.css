@@ -6,12 +6,12 @@ able, tr, td, th {
     border:#55a6ff38 solid 1px;
     width:450px;
     padding:1px;
-    font-size:20px;
+    font-size:17px;
     border-collapse:collapse;
     padding-right: 1.75rem;
     padding-top: 1.75rem;
     padding-left: 1.75rem;
-    padding-bottom: 1rem;
+    padding-bottom: 1.75rem;
 }
 
 td{

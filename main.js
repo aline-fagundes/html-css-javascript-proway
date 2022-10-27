@@ -1,212 +1,212 @@
 const produtosIniciais = [
   {
-    descricao: "Chocolate ao leite Hersheys",
+    descricao: "CHOCOLATE AO LEITE HERSHEYS",
     preco: 3.00,
     estoque: 25,
-    categoria: "Chocolate",
+    categoria: "CHOCOLATE",
   },
 
   {
-    descricao: "Bala de cereja Halls",
+    descricao: "BALA DE CEREJA HALLS",
     preco: 3.00,
     estoque: 20,
-    categoria: "Bala",
+    categoria: "BALA",
   },
 
   {
-    descricao: "Bolacha de chocolate Passatempo",
+    descricao: "BOLACHA DE CHOCOLATE PASSATEMPO",
     preco: 1.50,
     estoque: 15,
-    categoria: "Bolacha",
+    categoria: "BOLACHA",
   },
 
   {
-    descricao: "Chocolate ao leite Nestlé",
+    descricao: "CHOCOLATE AO LEITE NESTLÉ",
     preco: 5.50,
     estoque: 25,
-    categoria: "Chocolate",
+    categoria: "CHOCOLATE",
   },
 
   {
-    descricao: "Bala de cereja Freegells",
+    descricao: "BALA DE CEREJA FREEGELLS",
     preco: 2.50,
     estoque: 20,
-    categoria: "Bala",
+    categoria: "BALA",
   },
 
   {
-    descricao: "Bolacha de morango Passatempo",
+    descricao: "BOLACHA DE MORANGO PASSATEMPO",
     preco: 1.50,
     estoque: 15,
-    categoria: "Bolacha",
+    categoria: "BOLACHA",
   },
 
   {
-    descricao: "Chocolate ao leite Lacta",
+    descricao: "CHOCOLATE AO LEITE LACTA",
     preco: 5.00,
     estoque: 25,
-    categoria: "Chocolate",
+    categoria: "CHOCOLATE",
   },
 
   {
-    descricao: "Bala de morango Halls",
+    descricao: "BALA DE MORANGO HALLS",
     preco: 3.00,
     estoque: 20,
-    categoria: "Bala",
+    categoria: "BALA",
   },
 
   {
-    descricao: "Bolacha ao leite Passatempo",
+    descricao: "BOLACHA AO LEITE PASSATEMPO",
     preco: 1.50,
     estoque: 15,
-    categoria: "Bolacha",
+    categoria: "BOLACHA",
   },
 
   {
-    descricao: "Chocolate meio amargo Hersheys",
+    descricao: "CHOCOLATE MEIO AMARGO HERSHEYS",
     preco: 3.00,
     estoque: 25,
-    categoria: "Chocolate",
+    categoria: "CHOCOLATE",
   },
 
   {
-    descricao: "Bala de morango Freegells",
+    descricao: "BALA DE MORANGO FREEGELLS",
     preco: 2.50,
     estoque: 20,
-    categoria: "Bala",
+    categoria: "BALA",
   },
 
   {
-    descricao: "Bolacha de leite Nesfit",
+    descricao: "BOLACHA DE LEITE NESFIT",
     preco: 2.50,
     estoque: 15,
-    categoria: "Bolacha",
+    categoria: "BOLACHA",
   },
 
   {
-    descricao: "Chocolate meio amargo Nestlé",
+    descricao: "CHOCOLATE MEIO AMARGO NESTLÉ",
     preco: 5.50,
     estoque: 25,
-    categoria: "Chocolate",
+    categoria: "CHOCOLATE",
   },
 
   {
-    descricao: "Bala de menta Halls",
+    descricao: "BALA DE MENTA HALLS",
     preco: 3.00,
     estoque: 20,
-    categoria: "Bala",
+    categoria: "BALA",
   },
 
   {
-    descricao: "Bolacha de chocolate Nesfit",
+    descricao: "BOLACHA DE CHOCOLATE NESFIT",
     preco: 2.50,
     estoque: 15,
-    categoria: "Bolacha",
+    categoria: "BOLACHA",
   },
 
   {
-    descricao: "Chocolate meio amargo Lacta",
+    descricao: "CHOCOLATE MEIO AMARGO LACTA",
     preco: 5.00,
     estoque: 25,
-    categoria: "Chocolate",
+    categoria: "CHOCOLATE",
   },
 
   {
-    descricao: "Bala de menta Freegells",
+    descricao: "BALA DE MENTA FREEGELLS",
     preco: 2.50,
     estoque: 20,
-    categoria: "Bala",
+    categoria: "BALA",
   },
 
   {
-    descricao: "Bolacha de morango Nesfit",
+    descricao: "BOLACHA DE MORANGO NESFIT",
     preco: 2.50,
     estoque: 15,
-    categoria: "Bolacha",
+    categoria: "BOLACHA",
   },
 
   {
-    descricao: "Chocolate branco Hersheys",
+    descricao: "CHOCOLATE BRANCO HERSHEYS",
     preco: 3.00,
     estoque: 25,
-    categoria: "Chocolate",
+    categoria: "CHOCOLATE",
   },
 
   {
-    descricao: "Bala de melancia Halls",
+    descricao: "BALA DE MELANCIA HALLS",
     preco: 3.00,
     estoque: 20,
-    categoria: "Bala",
+    categoria: "BALA",
   },
 
   {
-    descricao: "Bolacha Waffer chocolate Bauducco",
+    descricao: "BOLACHA DE CHOCOLATE BAUDUCCO",
     preco: 3.00,
     estoque: 15,
-    categoria: "Bolacha",
+    categoria: "BOLACHA",
   },
 
   {
-    descricao: "Chocolate branco Nestlé",
+    descricao: "CHOCOLATE BRANCO NESTLÉ",
     preco: 5.50,
     estoque: 25,
-    categoria: "Chocolate",
+    categoria: "CHOCOLATE",
   },
 
   {
-    descricao: "Bala de melancia Freegells",
+    descricao: "BALA DE MELANCIA FREEGELLS",
     preco: 2.50,
     estoque: 20,
-    categoria: "Bala",
+    categoria: "BALA",
   },
 
   {
-    descricao: "Bolacha Waffer morango Bauducco",
+    descricao: "BOLACHA DE MORANGO BAUDUCCO",
     preco: 3.00,
     estoque: 15,
-    categoria: "Bolacha",
+    categoria: "BOLACHA",
   },
 
   {
-    descricao: "Chocolate branco Lacta",
+    descricao: "CHOCOLATE BRANCO LACTA",
     preco: 5.00,
     estoque: 25,
-    categoria: "Chocolate",
+    categoria: "CHOCOLATE",
   },
 
   {
-    descricao: "Bala de extra forte Halls",
+    descricao: "BALA EXTRA FORTE HALLS",
     preco: 3.00,
     estoque: 20,
-    categoria: "Bala",
+    categoria: "BALA",
   },
 
   {
-    descricao: "Cookies chocolate Toddy",
+    descricao: "COOKIES DE CHOCOLATE TODDY",
     preco: 5.00,
     estoque: 15,
-    categoria: "Bolacha",
+    categoria: "BOLACHA",
   },
 
   {
-    descricao: "Chocolate flocos Hersheys",
+    descricao: "CHOCOLATE DE FLOCOS HERSHEYS",
     preco: 3.00,
     estoque: 25,
-    categoria: "Chocolate",
+    categoria: "CHOCOLATE",
   },
 
   {
-    descricao: "Bala de extra forte Freegells",
+    descricao: "BALA EXTRA FORTE FREEGELLS",
     preco: 2.50,
     estoque: 20,
-    categoria: "Bala",
+    categoria: "BALA",
   },
 
   {
-    descricao: "Cookies chocolate branco Toddy",
+    descricao: "COOKIES DE CHOCOLATE MESCLADO TODDY",
     preco: 5.00,
     estoque: 15,
-    categoria: "Bolacha",
+    categoria: "BOLACHA",
   },
 ];
 
@@ -231,6 +231,27 @@ if (localStorage.getItem("produtosCarrinho")) {
 
 
 
+function exibirProdutos() {
+  var txt = "";
+
+  for (let i = 0; i < 15; i++) {
+    txt += `<tr>
+              <td>${produtos[i].descricao}</td>
+              <td>${produtos[i].preco.toFixed(2)}</td>
+              <td>${produtos[i].estoque}</td>
+              <td>${produtos[i].categoria}</td>
+              <td><button class="botao" onclick="comprarHome(${i})">Sim!</button></td>
+            </tr>`;
+  }
+  document.getElementsByTagName("tbody")[0].innerHTML = txt;
+}
+
+
+
+function exibirProdutosEmbaralhados() {
+  embaralhaArray(produtos);
+  exibirProdutos();
+}
 
 
 
@@ -243,39 +264,27 @@ function embaralhaArray(array) {
 
 
 
-function exibirProdutosEmbaralhados() {
-  embaralhaArray(produtos);
+function exibirProdutosCarrinho() {
+  var txtCarrinho = '';
 
-  var txt = "";
-
-  for (let i = 0; i < 15; i++) {
-    txt += `<tr>
-              <td>${produtos[i].descricao}</td>
-              <td>${produtos[i].preco.toFixed(2)}</td>
-              <td>${produtos[i].estoque}</td>
-              <td>${produtos[i].categoria}</td>
-              <td><button class="botao" onclick="comprar(${i})">Sim!</button></td>
+  if (produtosCarrinho.length == 0) {
+    txtCarrinho += `<tr>
+              <td colspan="5">Você não colocou itens aqui ainda!</td>
             </tr>`;
-  }
-  document.getElementsByTagName("tbody")[0].innerHTML = txt;
-}
-
-
-
-function exibirProdutos() {
   
-  var txt = "";
-
-  for (let i = 0; i < 15; i++) {
-    txt += `<tr>
-              <td>${produtos[i].descricao}</td>
-              <td>${produtos[i].preco.toFixed(2)}</td>
-              <td>${produtos[i].estoque}</td>
-              <td>${produtos[i].categoria}</td>
-              <td><button class="botao" onclick="comprar(${i})">Sim!</button></td>
+  } else {
+    
+    for (let i = 0; i < produtosCarrinho.length; i++) {
+      txtCarrinho += `<tr>
+              <td>${produtosCarrinho[i].descricao}</td>
+              <td>${produtosCarrinho[i].preco.toFixed(2)}</td>
+              <td>${produtosCarrinho[i].quantidade}</td>
+              <td><button class="botao" onclick="remover(${i})">-</button><button class="botao" onclick="comprarCarrinho(${i})">+</button></td>
             </tr>`;
+    }
   }
-  document.getElementsByTagName("tbody")[0].innerHTML = txt;
+
+  document.querySelector('#tb-carrinho').innerHTML = txtCarrinho;
 }
 
 
@@ -305,33 +314,20 @@ function comprar(posicao) {
 
   localStorage.setItem("produtos", JSON.stringify(produtos));
   localStorage.setItem("produtosCarrinho", JSON.stringify(produtosCarrinho));
-
-  exibirProdutos();
 }
 
 
 
-function exibirProdutosCarrinho() {
-  var txtCarrinho = '';
+function comprarCarrinho(posicao) {
+  comprar(posicao);
+  exibirProdutosCarrinho()
+}
 
-  if (produtosCarrinho.length == 0) {
-    txtCarrinho += `<tr>
-              <td colspan="5">Você não colocou itens aqui ainda!</td>
-            </tr>`;
-  
-  } else {
-    
-    for (let i = 0; i < produtosCarrinho.length; i++) {
-      txtCarrinho += `<tr>
-              <td>${produtosCarrinho[i].descricao}</td>
-              <td>${produtosCarrinho[i].preco.toFixed(2)}</td>
-              <td>${produtosCarrinho[i].quantidade}</td>
-              <td><button class="botao" onclick="remover(${i})">Sim!</button></td>
-            </tr>`;
-    }
-  }
 
-  document.querySelector('#tb-carrinho').innerHTML = txtCarrinho;
+
+function comprarHome(posicao) {
+  comprar(posicao);
+  exibirProdutos();
 }
 
 
@@ -366,10 +362,11 @@ function calcularTotal() {
 
 function buscar() {
   var produtoBuscado = document.querySelector("#produto-buscado").value;
+  var produtoBuscadoCaps = produtoBuscado.toUpperCase();
 
   var produtosEncontrados = [];
   produtosEncontrados = produtos.filter((produto) =>
-    produto.descricao.includes(produtoBuscado)
+    produto.descricao.includes(produtoBuscadoCaps)
   );
 
   console.log(produtosEncontrados);
@@ -403,7 +400,7 @@ function buscar() {
 
 function exibirChocolates() {
   const chocolates = produtos.filter(
-    (produto) => produto.categoria === "Chocolate"
+    (produto) => produto.categoria === "CHOCOLATE"
   );
 
   console.log(chocolates);
@@ -423,9 +420,7 @@ function exibirChocolates() {
 
 
 function exibirBalas() {
-  const balas = produtos.filter((produto) => produto.categoria === "Bala");
-
-  console.log(balas);
+  const balas = produtos.filter((produto) => produto.categoria === "BALA");
 
   var txtBalas = "";
   for (let i = 0; i < balas.length; i++) {
@@ -443,10 +438,8 @@ function exibirBalas() {
 
 function exibirBolachas() {
   const bolachas = produtos.filter(
-    (produto) => produto.categoria === "Bolacha"
+    (produto) => produto.categoria === "BOLACHA"
   );
-
-  console.log(bolachas);
 
   var txtBolachas = "";
   for (let i = 0; i < bolachas.length; i++) {
