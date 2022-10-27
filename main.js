@@ -234,7 +234,36 @@ if (localStorage.getItem("produtosCarrinho")) {
 
 
 
+function embaralhaArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
+
+
+function exibirProdutosEmbaralhados() {
+  embaralhaArray(produtos);
+
+  var txt = "";
+
+  for (let i = 0; i < 15; i++) {
+    txt += `<tr>
+              <td>${produtos[i].descricao}</td>
+              <td>${produtos[i].preco.toFixed(2)}</td>
+              <td>${produtos[i].estoque}</td>
+              <td>${produtos[i].categoria}</td>
+              <td><button class="botao" onclick="comprar(${i})">Sim!</button></td>
+            </tr>`;
+  }
+  document.getElementsByTagName("tbody")[0].innerHTML = txt;
+}
+
+
+
 function exibirProdutos() {
+  
   var txt = "";
 
   for (let i = 0; i < 15; i++) {
@@ -301,13 +330,13 @@ function exibirProdutosCarrinho() {
             </tr>`;
     }
   }
+
   document.querySelector('#tb-carrinho').innerHTML = txtCarrinho;
 }
 
 
 
 function remover(posicao) {
-
   const produtoSelecionado = produtosCarrinho[posicao];
   const produtoEncontrado = produtos.find((p) => p.descricao === produtoSelecionado.descricao);
 
@@ -327,10 +356,10 @@ function remover(posicao) {
 
 
 function calcularTotal() {
-var precoTotal = produtosCarrinho.reduce((resultado, produto) => {
-   return (resultado + (produto.preco * produto.quantidade)); 
-  }, 0);
-document.querySelector('#preco-total').innerHTML = precoTotal.toFixed(2);
+  var precoTotal = produtosCarrinho.reduce((resultado, produto) => {
+    return (resultado + (produto.preco * produto.quantidade)); 
+    }, 0);
+  document.querySelector('#preco-total').innerHTML = precoTotal.toFixed(2);
 }
 
 
