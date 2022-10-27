@@ -231,19 +231,11 @@ if (localStorage.getItem("produtosCarrinho")) {
 
 
 
-function exibirProdutos() {
-  var txt = "";
-
-  for (let i = 0; i < 15; i++) {
-    txt += `<tr>
-              <td>${produtos[i].descricao}</td>
-              <td>${produtos[i].preco.toFixed(2)}</td>
-              <td>${produtos[i].estoque}</td>
-              <td>${produtos[i].categoria}</td>
-              <td><button class="botao" onclick="comprarHome(${i})">Sim!</button></td>
-            </tr>`;
+function embaralhaArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
   }
-  document.getElementsByTagName("tbody")[0].innerHTML = txt;
 }
 
 
@@ -255,11 +247,19 @@ function exibirProdutosEmbaralhados() {
 
 
 
-function embaralhaArray(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]];
+function exibirProdutos() {
+  var txt = "";
+
+  for (let i = 0; i < 15; i++) {
+    txt += `<tr>
+              <td>${produtos[i].descricao}</td>
+              <td>${produtos[i].preco.toFixed(2)}</td>
+              <td>${produtos[i].estoque}</td>
+              <td>${produtos[i].categoria}</td>
+              <td><button class="botao-simples" onclick="comprar(${i})">Sim!</button></td>
+            </tr>`;
   }
+  document.getElementsByTagName("tbody")[0].innerHTML = txt;
 }
 
 
@@ -279,7 +279,7 @@ function exibirProdutosCarrinho() {
               <td>${produtosCarrinho[i].descricao}</td>
               <td>${produtosCarrinho[i].preco.toFixed(2)}</td>
               <td>${produtosCarrinho[i].quantidade}</td>
-              <td><button class="botao" onclick="remover(${i})">-</button><button class="botao" onclick="comprarCarrinho(${i})">+</button></td>
+              <td><button class="botao-simples" onclick="remover(${i})">-</button></td>
             </tr>`;
     }
   }
@@ -314,19 +314,7 @@ function comprar(posicao) {
 
   localStorage.setItem("produtos", JSON.stringify(produtos));
   localStorage.setItem("produtosCarrinho", JSON.stringify(produtosCarrinho));
-}
 
-
-
-function comprarCarrinho(posicao) {
-  comprar(posicao);
-  exibirProdutosCarrinho()
-}
-
-
-
-function comprarHome(posicao) {
-  comprar(posicao);
   exibirProdutos();
 }
 
@@ -409,9 +397,9 @@ function exibirChocolates() {
   for (let i = 0; i < chocolates.length; i++) {
     txtChocolates += `<tr>
               <td>${chocolates[i].descricao}</td>
-              <td>${chocolates[i].preco}</td>
+              <td>${chocolates[i].preco.toFixed(2)}</td>
               <td>${chocolates[i].estoque}</td>
-              <td><button class="botao" onclick="comprar(${i})">Sim!</button></td>
+              <td><button class="botao-simples" onclick="comprar(${i})">Sim!</button></td>
             </tr>`;
   }
   document.querySelector("#chocolates").innerHTML = txtChocolates;
@@ -426,9 +414,9 @@ function exibirBalas() {
   for (let i = 0; i < balas.length; i++) {
     txtBalas += `<tr>
               <td>${balas[i].descricao}</td>
-              <td>${balas[i].preco}</td>
+              <td>${balas[i].preco.toFixed(2)}</td>
               <td>${balas[i].estoque}</td>
-              <td><button class="botao" onclick="comprar(${i})">Sim!</button></td>
+              <td><button class="botao-simples" onclick="comprar(${i})">Sim!</button></td>
             </tr>`;
   }
   document.querySelector("#balas").innerHTML = txtBalas;
@@ -445,9 +433,9 @@ function exibirBolachas() {
   for (let i = 0; i < bolachas.length; i++) {
     txtBolachas += `<tr>
               <td>${bolachas[i].descricao}</td>
-              <td>${bolachas[i].preco}</td>
+              <td>${bolachas[i].preco.toFixed(2)}</td>
               <td>${bolachas[i].estoque}</td>
-              <td><button class="botao" onclick="comprar(${i})">Sim!</button></td>
+              <td><button class="botao-simples" onclick="comprar(${i})">Sim!</button></td>
             </tr>`;
   }
   document.querySelector("#bolachas").innerHTML = txtBolachas;
