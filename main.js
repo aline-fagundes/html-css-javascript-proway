@@ -214,7 +214,6 @@ var produtosCarrinho = [];
 
 
 
-
 function exibirProdutos() {
   var txt = "";
   for (let i = 0; i < 15; i++) {
@@ -228,6 +227,7 @@ function exibirProdutos() {
   }
   document.getElementsByTagName("tbody")[0].innerHTML = txt;
 }
+
 
 
 function comprar(posicao) {
@@ -292,34 +292,50 @@ function exibirProdutosCarrinho() {
 }
 
 
+
 //TODO: FAZER FUNÇÃO REMOVER QUE DIMINUA A QUANTIDA E, SE ZERAR, RETIRA DA TABELA O PRODUTO
 function calcularTotal() {
-
-
+//const precoTotal = produtosCarrinho.reduce((resultado, preco) => { return (resultado + (preco.preco * quantidadeCarrinho)); }, 0);
+//console.log(precoTotal);
 }
 
 
-function calcularTotal() {
-  //const precoTotal = produtosCarrinho.reduce((resultado, preco) => { return (resultado + (preco.preco * quantidadeCarrinho)); }, 0);
-  //console.log(precoTotal);
-}
 
-
-//TODO: MELHORAR BUSCA PARA TRAZER MAIS DE UM E BUSCAR POR PARTE DA PALAVRA SÓ!
-//COLOCAR DENTRO DE UM ARRAY DE ENCONTRADOS E ENFIAR NUMA TABELA SEM HEAD OS RESULTADOS!
 function buscar() {
   var produtoBuscado = document.querySelector("#produto-buscado").value;
 
-  if (produtos.indexOf(produtoBuscado) == -1) {
-    var msg = "Produto não encontrado!";
-    document.querySelector("#produto-encontrado").innerHTML = msg;
-  } else {
-    var posicao = produtos.indexOf(produtoBuscado);
-    produtoEncontrado = produtos[posicao].nome;
+  var produtosEncontrados = [];
+  produtosEncontrados = produtos.filter((produto) =>
+    produto.descricao.includes(produtoBuscado)
+  );
 
-    document.querySelector("#produto-encontrado").innerHTML = produtoEncontrado;
+  console.log(produtosEncontrados);
+
+  var txtBusca = `<table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th scope="col">Resultado</th>
+                    </tr>
+                    </thead>
+                    <tbody>`;
+
+  if (produtosEncontrados.length == 0) {
+    txtBusca += `<tr>
+                    <td>Nenhum produto encontrado!</td>
+                  </tr>`;
+    document.querySelector("#resultado-busca").innerHTML =
+      txtBusca + `</tbody></table>`;
+  } else {
+    for (let i = 0; i < produtosEncontrados.length; i++) {
+      txtBusca += ` <tr>
+                      <td>${produtosEncontrados[i].descricao}</td>
+                    </tr>`;
+    }
+    document.querySelector("#resultado-busca").innerHTML =
+      txtBusca + `</tbody></table>`;
   }
 }
+
 
 
 function exibirChocolates() {
@@ -342,6 +358,7 @@ function exibirChocolates() {
 }
 
 
+
 function exibirBalas() {
   const balas = produtos.filter((produto) => produto.categoria === "Bala");
 
@@ -358,6 +375,7 @@ function exibirBalas() {
   }
   document.querySelector("#balas").innerHTML = txtBalas;
 }
+
 
 
 function exibirBolachas() {

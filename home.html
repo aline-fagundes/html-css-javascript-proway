@@ -54,17 +54,17 @@
             
             <div class="flex flex--coluna">
                 <div class="input-container cadastro__descricao-container">
-                    <input class="input" name="produto-buscado" id="produto-buscado" placeholder="Produto buscado" required>
+                    <input class="input" name="produto-buscado" id="produto-buscado" placeholder="Produto buscado">
                     <label class="input-label" for="produto-buscado">Nome do produto</label>
                 </div>              
                
                 <button class="botao" onclick="buscar()">Buscar produto</button>
             
-                <br><br>
+                <br>
 
-                <div class="input-container cadastro__descricao-container">
-                    <input readonly><span id="produto-encontrado"></span></input>
-                </div> 
+                <div class="input-container" id="resultado-busca">
+                    
+                </div>      
             </div>
         </section>
     </main>
