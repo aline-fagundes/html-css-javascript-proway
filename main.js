@@ -1,4 +1,4 @@
-var produtos = [
+const produtosIniciais = [
   {
     descricao: "Chocolate ao leite Hersheys",
     preco: 3.0,
@@ -210,12 +210,33 @@ var produtos = [
   },
 ];
 
+
+
+var produtos = []; 
+
+if (localStorage.getItem("produtos") == null) {
+  produtos = produtosIniciais;
+  localStorage.setItem("produtos", JSON.stringify(produtos));
+}
+
+produtos = JSON.parse(localStorage.getItem("produtos"));
+
+
+
 var produtosCarrinho = [];
+
+if (localStorage.getItem("produtosCarrinho")) {
+  produtosCarrinho = JSON.parse(localStorage.getItem("produtosCarrinho"));
+}
+
+
+
 
 
 
 function exibirProdutos() {
   var txt = "";
+
   for (let i = 0; i < 15; i++) {
     txt += `<tr>
               <td>${produtos[i].descricao}</td>
@@ -231,65 +252,83 @@ function exibirProdutos() {
 
 
 function comprar(posicao) {
-  var produto = produtos[posicao];
 
-  if (produto.estoque > 0) {
-    produto.estoque -= 1;
+  const produtoSelecionado = produtos[posicao];
+  const produtoEncontrado = produtosCarrinho.find((p) => p.descricao === produtoSelecionado.descricao);
 
-    if (produtosCarrinho.indexOf(produto) == -1) {
+  if (produtoSelecionado.estoque > 0) {
+    produtoSelecionado.estoque -= 1;
+
+    if(produtoEncontrado == null) {
       var produtoComprado = {
-        descricao: produto.descricao,
-        preco: produto.preco,
-        quantidade: 0,
-        categoria: produto.categoria,
+        descricao: produtoSelecionado.descricao,
+        preco: produtoSelecionado.preco,
+        quantidade: 1,
+        categoria: produtoSelecionado.categoria,
       };
-
+  
       produtosCarrinho.push(produtoComprado);
     } else {
-      var posicao = produtosCarrinho.indexOf(produto);
-      produtosCarrinho[posicao].quantidade += 1;
+      produtoEncontrado.quantidade++;
     }
+  } else {
+    alert("O produto está esgotado!")
   }
+
+  localStorage.setItem("produtos", JSON.stringify(produtos));
+  localStorage.setItem("produtosCarrinho", JSON.stringify(produtosCarrinho));
 
   exibirProdutos();
 }
 
 
 
-//TODO: COLOCAR QUANTIDADE DE CADA PRODUTO PEDIDO E PREÇO TOTAL + EXIBIR MENSAGEM SE CARRINHO ESTÁ VAZIO!
 function exibirProdutosCarrinho() {
-  var txtCarrinho = "";
 
-  if (produtosCarrinho == null) {
-    txtCarrinho += `<p>Você não colocou nenhum item em seu carrinho!</p>`;
-    document.querySelector("#itens-carrinho").innerHTML = txtCarrinho;
+  console.log("Produtos do carrinho: ");
+  console.log({produtosCarrinho});
+
+  var txtCarrinho = '';
+
+  if (produtosCarrinho.length == 0) {
+    txtCarrinho += `<tr>
+              <td colspan="5">Você não colocou itens aqui ainda!</td>
+            </tr>`;
+  
   } else {
-    for (let i = 0; i < 15; i++) {
-      txtCarrinho += `<table class="table table-bordered">
-          <thead>
-            <tr>
-              <th scope="col">Produto</th>
-              <th scope="col">Preço R$</th>
-              <th scope="col">Quantidade</th>
-              <th scope="col">Marca</th>
-              <th scope="col">Remover?</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
+    
+    for (let i = 0; i < produtosCarrinho.length; i++) {
+      txtCarrinho += `<tr>
               <td>${produtosCarrinho[i].descricao}</td>
               <td>${produtosCarrinho[i].preco}</td>
-              <td>${produtosCarrinho[i].quantidadeCarrinho}</td>
-              <td>${produtosCarrinho[i].categoria}</td>
+              <td>${produtosCarrinho[i].quantidade}</td>
               <td><button class="botao" onclick="remover(${i})">Sim!</button></td>
-
-            </tr>
-          </tbody>
-        </table>`;
+            </tr>`;
     }
-    document.querySelector("#itens-carrinho").innerHTML = txtCarrinho;
   }
+  document.querySelector('#tb-carrinho').innerHTML = txtCarrinho;
 }
+
+
+
+function remover(posicao) {
+
+  const produtoSelecionado = produtosCarrinho[posicao];
+  const produtoEncontrado = produtos.find((p) => p.descricao === produtoSelecionado.descricao);
+
+  produtoSelecionado.quantidade--;
+  produtoEncontrado.estoque++;
+
+  if(produtoSelecionado.quantidade <= 0) {
+    produtosCarrinho.splice(posicao, 1);
+  }
+
+  localStorage.setItem("produtos", JSON.stringify(produtos));
+  localStorage.setItem("produtosCarrinho", JSON.stringify(produtosCarrinho));
+
+  exibirProdutosCarrinho();
+}
+
 
 
 
@@ -297,6 +336,8 @@ function exibirProdutosCarrinho() {
 function calcularTotal() {
 //const precoTotal = produtosCarrinho.reduce((resultado, preco) => { return (resultado + (preco.preco * quantidadeCarrinho)); }, 0);
 //console.log(precoTotal);
+
+//Colocar valor final no id preco-total!
 }
 
 
@@ -312,11 +353,11 @@ function buscar() {
   console.log(produtosEncontrados);
 
   var txtBusca = `<table class="table table-bordered">
-                    <thead>
-                    <tr>
-                        <th scope="col">Resultado</th>
-                    </tr>
-                    </thead>
+                      <thead>
+                        <tr>
+                          <th scope="col">Resultado</th>
+                        </tr>
+                      </thead>
                     <tbody>`;
 
   if (produtosEncontrados.length == 0) {

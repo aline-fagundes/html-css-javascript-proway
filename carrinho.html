@@ -28,13 +28,23 @@
     <main class="container flex flex--centro flex--coluna">
         <section class="cartao cadastro">
             
-            <h1 class="cartao__titulo">Consultar produtos</h1>
+            <h1 class="cartao__titulo">Minhas guloseimas</h1>
             
-                <div class="input-container" id="itens-carrinho">
-
+            <div class="input-container">
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th scope="col">Produto</th>
+                        <th scope="col">Preço R$</th>
+                        <th scope="col">Quantidade</th>
+                        <th scope="col">Remover?</th>
+                    </tr>
+                    </thead>
                     
-
-                </div>        
+                    <tbody id="tb-carrinho">
+                    </tbody>
+                </table>
+            </div>       
         </section>
 
         <div class="flex flex--coluna">

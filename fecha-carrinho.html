@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lojinha Naponline | Cadastro concluído</title>
+    <title>Lojinha Naponline | Carrinho concluído</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="./assets/css/base/base.css">
@@ -28,8 +28,10 @@
     
     <main class="container flex flex--coluna flex--centro">
         <section class="cadastro-cartao cartao">
-            <h1 class="cadastro-cartao__titulo cartao__titulo">O total a ser pago é R$: </h1>
-            <a href="./home.html" class="botao">Comprar outros produtos</a>
+            <div class="flex flex--coluna">
+                <h1 class="cartao__titulo">O total a ser pago é R$: <span id="preco-total"></span></h1>
+                <a href="./home.html" class="botao">Comprar mais guloseimas</a>
+            </div>
         </section>
     </main>
 
